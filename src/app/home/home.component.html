@@ -1,0 +1,19 @@
+Book Id: <input type="text" [(ngModel)]="bookId"><br><br>
+Book Title: <input type="text" [(ngModel)]="bookTitle"><br><br>
+Book Price: <input type="text" [(ngModel)]="bookPrice"><br><br>
+<button (click)="addBook()">Add Book"</button>
+<table border="1">
+   <thead>
+    <tr>
+        <th>Title</th>
+        <th>Price</th>
+    </tr> 
+    </thead>
+    <tbody>
+    
+    <tr *ngFor="let book of books">
+        <td>{{book.title}}</td>
+        <td>{{book.price}}</td>
+    </tr>
+    </tbody>
+</table>
